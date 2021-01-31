@@ -13,6 +13,22 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
+# gym system packages
+# from https://github.com/openai/gym#installing-everything
+RUN apt-get install -y cmake \
+    curl \
+    ffmpeg \
+    libgl1-mesa-dev \
+    libglfw3 \
+    libglfw3-dev \
+    libglu1-mesa-dev \
+    libosmesa6-dev \
+    patchelf \
+    swig \
+    xvfb \
+    zlib1g \
+    zlib1g-dev
+
 # from https://coax.readthedocs.io/en/latest/
 RUN pip install --upgrade coax \
     jax \
