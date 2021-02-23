@@ -15,7 +15,8 @@ RUN groupadd --gid $USER_GID $USERNAME \
 
 # gym system packages
 # from https://github.com/openai/gym#installing-everything
-RUN apt-get install -y cmake \
+RUN apt-get install -y build-essential \
+    cmake \
     curl \
     ffmpeg \
     libgl1-mesa-dev \
@@ -34,4 +35,7 @@ RUN pip install --upgrade coax \
     jax \
     jaxlib
 
-RUN conda install -c conda-forge jupyterlab
+# need the gym atari environment
+RUN pip install gym[atari]
+
+RUN pip install --upgrade jupyterlab
