@@ -35,7 +35,12 @@ RUN pip install --upgrade coax \
     jax \
     jaxlib
 
+
 # need the gym atari environment
 RUN pip install gym[atari]
 
+# to run some jax demos
+RUN pip install tensorflow tensorflow-datasets
+
 RUN pip install --upgrade jupyterlab
+
