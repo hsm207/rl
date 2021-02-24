@@ -34,4 +34,7 @@ RUN pip install --upgrade coax \
     jax \
     jaxlib
 
+# to run some jax demos
+RUN pip install tensorflow tensorflow-datasets
+
 RUN conda install -c conda-forge jupyterlab
