@@ -15,7 +15,7 @@
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": ["ms-python.python", "eamodio.gitlens"],
+	"extensions": ["ms-python.python", "eamodio.gitlens", "github.vscode-pull-request-github"],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
