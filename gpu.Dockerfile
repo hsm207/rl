@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.1.1-devel-ubuntu20.04
+FROM nvidia/cuda:10.1-devel-ubuntu18.04
 
 # install python
 # from: https://github.com/ContinuumIO/docker-images/blob/master/anaconda3/debian/Dockerfile
@@ -67,7 +67,7 @@ RUN pip install --upgrade coax \
 
 RUN pip install --upgrade coax \
     jax \
-    jaxlib==0.1.59+cuda111 -f https://storage.googleapis.com/jax-releases/jax_releases.html
+    jaxlib==0.1.60+cuda101 -f https://storage.googleapis.com/jax-releases/jax_releases.html
 
 
 # need the gym atari environment
