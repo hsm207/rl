@@ -26,5 +26,7 @@ docker run -it \
     -p 8888:8888 \
     -v $(pwd):/workspaces/rl \
     -w /workspaces/rl \
+    --rm \
+    --name rl \
     rl:gpu jupyter lab --ip 0.0.0.0 --no-browser
 ```
