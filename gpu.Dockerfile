@@ -1,5 +1,8 @@
 FROM nvcr.io/nvidia/cuda:11.1.1-cudnn8-devel-ubuntu18.04
 
+# see https://github.com/microsoft/coax/issues/14#issuecomment-785800650
+ENV LD_LIBRARY_PATH /usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+
 # install python
 # from: https://github.com/ContinuumIO/docker-images/blob/master/anaconda3/debian/Dockerfile
 
@@ -77,5 +80,3 @@ RUN pip install gym[atari]
 RUN pip install tensorflow tensorflow-datasets
 
 RUN pip install --upgrade jupyterlab
-
-ENV LD_LIBRARY_PATH /usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
